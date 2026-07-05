@@ -72,11 +72,14 @@ print_pairing_qr() { # print_pairing_qr <url> <host> <port> <key>
     qrencode -t ANSIUTF8 "$__url"
     copy "Scan that with your phone's camera and Walkie fills in the address and key for you."
   else
-    copy "Pairing link (scan or paste into the app): $__url"
     copy "No QR tool installed (optional). Just open Walkie and it offers to fill this in, or type the"
     copy "address and key into Settings by hand: host=$__h port=$__p key=$__k"
     copy "Want a scannable code? Run: brew install qrencode, then re-run me."
   fi
+  # ALWAYS print the link as plain text too. If this install is being driven remotely (a Claude
+  # Code session steered from a phone), there's no screen to scan — the agent relays this line
+  # and the user just taps it. The walkie:// scheme is registered by the app.
+  copy "Not at the Mac? Tap this pairing link on your phone instead: $__url"
   copy "This link holds your client key. Treat it like a password. Only show it to your own phone."
 }
 
