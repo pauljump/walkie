@@ -1,0 +1,77 @@
+#!/bin/bash
+# Walkie `claude` shim — the jail injection point.
+#
+# The harness spawns builders as `claude …` via a PTY. When this directory is FIRST on PATH
+# (install-service.sh prepends $RUN/bin), macOS resolves `claude` to THIS shim instead of the
+# real CLI. The shim wraps the real claude in a per-worker sandbox-exec jail (jail-profile.sh),
+# so every builder runs confined: it can write only inside the task's sandbox + ~/.walkie, it
+# can use the operator's OWN subscription login (keychain, read-only), but it cannot touch the
+# operator's secrets (~/.ssh, ~/.aws, ~/.secrets, keychains, Desktop, Documents).
+#
+# Env it reads (all injected by the conductor at dispatch, or the launchd plist):
+#   WALKIE_WORKER_NAME     label for the profile file (e.g. TheoHands0001); default "worker"
+#   WALKIE_SANDBOX_DIR     the task's writeable worktree dir (the ONE place builds may write)
+#   WALKIE_STATE_DIR       Walkie state dir (default ~/.walkie)
+#   WALKIE_PROFILE_DENY    "1" = enforce the jail (self-host/live default). unset/"0" = passthrough
+#                          (dev/testing on a trusted machine). The installer sets this to 1.
+#   WALKIE_REAL_CLAUDE     explicit path to the real claude (else auto-resolved below)
+#
+# It must NEVER recurse into itself. It resolves the real claude by skipping its own directory.
+set -u
+
+self_dir="$(cd "$(dirname "$0")" && pwd)"
+
+# ── Resolve the REAL claude, skipping this shim's own directory so we never call ourselves. ──
+find_real_claude() {
+  if [ -n "${WALKIE_REAL_CLAUDE:-}" ] && [ -x "${WALKIE_REAL_CLAUDE}" ]; then
+    printf '%s' "${WALKIE_REAL_CLAUDE}"; return 0
+  fi
+  # Common install locations for the Claude CLI, in order of preference.
+  for cand in \
+    "$HOME/.local/bin/claude" \
+    "/opt/homebrew/bin/claude" \
+    "/usr/local/bin/claude" \
+    "$HOME/.claude/local/claude"; do
+    if [ -x "$cand" ] && [ "$(cd "$(dirname "$cand")" && pwd)" != "$self_dir" ]; then
+      printf '%s' "$cand"; return 0
+    fi
+  done
+  # Last resort: walk PATH and take the first `claude` that is NOT this shim.
+  local IFS=:
+  for d in $PATH; do
+    [ -n "$d" ] || continue
+    local p="$d/claude"
+    if [ -x "$p" ] && [ "$(cd "$d" 2>/dev/null && pwd)" != "$self_dir" ]; then
+      printf '%s' "$p"; return 0
+    fi
+  done
+  return 1
+}
+
+REAL_CLAUDE="$(find_real_claude)" || {
+  echo "walkie/bin/claude: cannot find the real claude CLI. Install it and/or set WALKIE_REAL_CLAUDE." >&2
+  exit 127
+}
+
+# ── Passthrough mode: jail disabled (dev on a trusted machine). Exec the real claude directly. ──
+if [ "${WALKIE_PROFILE_DENY:-0}" != "1" ]; then
+  exec "$REAL_CLAUDE" "$@"
+fi
+
+# ── Jailed mode: generate the per-worker profile, then exec under sandbox-exec. ──
+worker="${WALKIE_WORKER_NAME:-worker}"
+sandbox_dir="${WALKIE_SANDBOX_DIR:-}"
+state_dir="${WALKIE_STATE_DIR:-$HOME/.walkie}"
+
+profile="$(bash "$self_dir/../walkie/conductor/src/jail-profile.sh" "$worker" "$sandbox_dir" "$state_dir" 2>/dev/null)"
+# When the shim runs straight from the repo (not the mirrored $RUN layout), the generator sits
+# next to this bin dir under conductor/. Fall back to that path.
+if [ -z "$profile" ] || [ ! -f "$profile" ]; then
+  profile="$(bash "$self_dir/../src/jail-profile.sh" "$worker" "$sandbox_dir" "$state_dir" 2>/dev/null)"
+fi
+if [ -z "$profile" ] || [ ! -f "$profile" ]; then
+  echo "walkie/bin/claude: could not generate the jail profile — refusing to run a builder unjailed." >&2
+  exit 1
+fi
+
+exec sandbox-exec -f "$profile" "$REAL_CLAUDE" "$@"

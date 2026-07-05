@@ -1,0 +1,54 @@
+{
+  "_comment": "Walkie config template. The installer copies this to ~/.walkie/config.json and fills it in. You own that file; it is never mirrored back into the repo. Remove the _* comment fields if you like; the loader ignores unknown keys. Paths accept a leading ~ for your home directory.",
+
+  "_transport": "Phone on-ramp transport. 'local' (default) = a self-contained WS+REST bus on THIS Mac — no hosted relay, no rk_live_ key needed, fully self-host. 'agent-relay' = the original hosted Agent Relay path (needs workspaceKey below). Keep 'local' unless you specifically want the hosted relay.",
+  "transport": "local",
+
+  "_workspaceKey": "rk_live_… — your AgentRelay room key. ONLY needed when transport is 'agent-relay'. With the default 'local' transport you can leave this null.",
+  "workspaceKey": null,
+
+  "_brokerApiKey": "br_… — the key your phone presents to the local broker. Any string starting with br_. Per-user is fine; the default works.",
+  "brokerApiKey": "br_walkie",
+
+  "_brokerBind": "Bind address for the broker. 0.0.0.0 lets your phone reach it over Tailscale.",
+  "brokerBind": "0.0.0.0",
+
+  "_brokerPort": "Port the broker serves /ws and /api/send on.",
+  "brokerPort": "3889",
+
+  "_brokerStateDir": "Where the broker keeps its state. Outside any git repo so a sync can't wipe it.",
+  "brokerStateDir": "~/.walkie/relay",
+
+  "_sandboxDir": "Where the builders work, and nowhere else. The wizard auto-creates a local scratch git repo here (~/walkie-scratch) so your first walk works with no GitHub account. Builds land as branches you read on the Mac.",
+  "sandboxDir": "~/walkie-scratch",
+
+  "_sandboxRepo": "OPTIONAL. owner/repo — YOUR practice repo on GitHub. Leave null and builds stay in the local scratch project. Set it to turn on the 'open a PR you review on your phone' path. e.g. myuser/my-sandbox-repo.",
+  "sandboxRepo": null,
+
+  "_galleryDir": "Where published web demos are staged. Out-of-repo so a sync can't wipe it.",
+  "galleryDir": "~/walkie-demos",
+
+  "_factoryRoot": "Optional. A monorepo/portfolio root so the EM can see your projects. null = no factory context.",
+  "factoryRoot": null,
+
+  "_stateDir": "Root for logs, cost meter, team memory.",
+  "stateDir": "~/.walkie",
+
+  "_directorName": "What the EM calls you on the voice line.",
+  "directorName": "Director",
+
+  "_anthropicModel": "Model the EM (talkers) run on. Sonnet is fast enough for a live phone call.",
+  "anthropicModel": "claude-sonnet-4-6",
+
+  "_anthropicApiKey": "sk-ant-… — a metered API key for the EM, NOT a login. Runs the conversation for pennies. The builders use your claude CLI login (free), not this key. Leave null only if you set it via WALKIE_ANTHROPIC_API_KEY.",
+  "anthropicApiKey": null,
+
+  "_jailProfile": "OFF by default. Builders run on your own Mac using your Claude subscription login, so builds are free and work on the first try. Setting this true turns on a sandbox-exec jail that walls each build off from your secrets (~/.ssh, ~/.aws, ~/.secrets, keychains) — but the jail also blocks the subscription login, so with it ON you MUST supply a metered anthropicApiKey above. Hardened opt-in; leave false unless you want the fence.",
+  "jailProfile": false,
+
+  "_demoHost": "OPTIONAL. Public host that serves shipped web demos at https://<demoHost>/<slug>/. null = local-only: demos are saved to galleryDir and reported as a local path, no live link. Only set this if YOU run a public gallery server.",
+  "demoHost": null,
+
+  "_galleryHost": "OPTIONAL. Public host for the gallery wall. null = local-only. Pairs with demoHost.",
+  "galleryHost": null
+}

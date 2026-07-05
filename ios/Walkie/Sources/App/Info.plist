@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleName</key><string>Walkie</string>
+  <key>CFBundleDisplayName</key><string>Walkie</string>
+  <key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+  <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>$(MARKETING_VERSION)</string>
+  <key>CFBundleVersion</key><string>$(CURRENT_PROJECT_VERSION)</string>
+  <!-- Walkie uses only standard HTTPS/TLS (exempt encryption), so no export-compliance
+       docs are needed. Declaring this here skips the per-upload TestFlight prompt. -->
+  <key>ITSAppUsesNonExemptEncryption</key><false/>
+  <key>LSRequiresIPhoneOS</key><true/>
+  <key>UILaunchScreen</key><dict/>
+  <key>UISupportedInterfaceOrientations</key>
+  <array><string>UIInterfaceOrientationPortrait</string></array>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>Walkie listens during a call so you can run your standup hands-free, like talking to your EM on the phone.</string>
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>Walkie turns what you say into messages for your agent team.</string>
+  <key>NSCameraUsageDescription</key>
+  <string>Walkie uses the camera once to scan the code on your Mac so you don't have to type its address.</string>
+  <key>NSLocalNetworkUsageDescription</key>
+  <string>Walkie looks on your wifi for your Mac running the standup, so it can connect without typing an address.</string>
+  <!-- Required so NWBrowser can see the Mac's Bonjour service on iOS 14+. Without this the
+       browser returns nothing, with no error. Must exactly match the advertised service type
+       by the Walkie backend (the `_walkie._tcp` Bonjour advertiser). -->
+  <key>NSBonjourServices</key>
+  <array>
+    <string>_walkie._tcp</string>
+  </array>
+  <!-- URL scheme for deep linking. The Mac's setup prints a QR / link of the form
+       walkie://pair?host=..&port=..&key=.. ; registering the "walkie" scheme is what lets
+       iOS route that tap into the app (WalkieApp's .onOpenURL applies it). Without this a
+       walkie:// tap is silently ignored and nothing happens. -->
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLName</key>
+      <string>com.walkie.pair</string>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>walkie</string>
+      </array>
+      <key>CFBundleTypeRole</key>
+      <string>Viewer</string>
+    </dict>
+  </array>
+  <!-- Dev: the broker is a self-hosted local node reached over Tailscale on plain ws://.
+       Allow non-TLS loads until the broker terminates TLS. -->
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key><true/>
+  </dict>
+</dict>
+</plist>

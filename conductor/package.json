@@ -1,0 +1,28 @@
+{
+  "name": "walkie-conductor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Walkie EM conductor — orchestrates the talk -> build -> review loop over Agent Relay harness agents. Multi-provider (Claude/Codex/...); the EM surfaces only verified signal.",
+  "scripts": {
+    "demo": "node src/run-demo.mjs",
+    "broker": "node src/broker.mjs",
+    "live": "node src/run-live.mjs",
+    "e2e": "node test/e2e-loop.mjs",
+    "room": "node test/room.mjs",
+    "sandbox-pr": "node test/sandbox-pr.mjs",
+    "parallel": "node test/parallel.mjs",
+    "async": "node test/async.mjs",
+    "publish": "node test/publish.mjs",
+    "gate": "node test/confirm-gate.mjs",
+    "retry": "node test/retry.mjs",
+    "board": "node test/board.mjs",
+    "local-bus": "node test/local-bus.mjs"
+  },
+  "dependencies": {
+    "@agent-relay/sdk": "8.7.1",
+    "@agent-relay/harnesses": "8.7.1",
+    "@agent-relay/harness-driver": "8.7.1",
+    "@anthropic-ai/sdk": "^0.70.0"
+  }
+}

@@ -1,0 +1,10 @@
+# build output
+DerivedData/
+build/
+
+# xcode user-specific (keep the shared scheme + project.pbxproj, like the factory)
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+.DS_Store
