@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Walkie EM conductor — orchestrates the talk -> build -> review loop over Agent Relay harness agents. Multi-provider (Claude/Codex/...); the EM surfaces only verified signal.",
+  "description": "Walkie EM conductor \u2014 orchestrates the talk -> build -> review loop over Agent Relay harness agents. Multi-provider (Claude/Codex/...); the EM surfaces only verified signal.",
   "scripts": {
     "demo": "node src/run-demo.mjs",
     "broker": "node src/broker.mjs",
@@ -17,7 +17,8 @@
     "gate": "node test/confirm-gate.mjs",
     "retry": "node test/retry.mjs",
     "board": "node test/board.mjs",
-    "local-bus": "node test/local-bus.mjs"
+    "local-bus": "node test/local-bus.mjs",
+    "transcripts": "node test/transcripts.mjs"
   },
   "dependencies": {
     "@agent-relay/sdk": "8.7.1",

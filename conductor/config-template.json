@@ -46,6 +46,9 @@
   "_jailProfile": "OFF by default. Builders run on your own Mac using your Claude subscription login, so builds are free and work on the first try. Setting this true turns on a sandbox-exec jail that walls each build off from your secrets (~/.ssh, ~/.aws, ~/.secrets, keychains) — but the jail also blocks the subscription login, so with it ON you MUST supply a metered anthropicApiKey above. Hardened opt-in; leave false unless you want the fence.",
   "jailProfile": false,
 
+  "_transcripts": "Your OWN walk transcripts, saved on YOUR Mac (~/.walkie/transcripts/, one JSONL per day: the voice line + the team room, raw build output skipped). Local only, never leaves the machine. false = a walk stays a call and nothing is kept.",
+  "transcripts": true,
+
   "_demoHost": "OPTIONAL. Public host that serves shipped web demos at https://<demoHost>/<slug>/. null = local-only: demos are saved to galleryDir and reported as a local path, no live link. Only set this if YOU run a public gallery server.",
   "demoHost": null,
 

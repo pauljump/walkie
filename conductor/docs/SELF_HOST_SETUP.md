@@ -114,6 +114,7 @@ You own this file. It is never mirrored back into the repo. Paths accept a leadi
 | `anthropicApiKey` | `sk-ant-…` for the EM. A key, not a login. Builders don't use it. |
 | `jailProfile` | `false` by default: builders use your Claude subscription login (free, works first try). `true` = a hardened `sandbox-exec` jail, which also blocks the login, so it then requires a metered `anthropicApiKey`. See "the builder jail" below. |
 | `demoHost` / `galleryHost` | Optional public hosts for shipped web demos. `null` = local-only (no live URL). |
+| `transcripts` | `true` by default: your walks are saved to `~/.walkie/transcripts/` (daily JSONL, voice line + team room, build noise skipped). Local only. `false` = keep nothing. |
 
 Every field also has a `WALKIE_*` environment override (for CI/testing). The file is the norm for
 self-host, env wins when set. See `config-template.json` for the annotated defaults.

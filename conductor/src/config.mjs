@@ -61,6 +61,10 @@ function defaults() {
     // spoken disclosure; flip to false here (or WALKIE_TELEMETRY=0) to stop. Never content:
     // see telemetry.mjs rule #1.
     telemetry: false,
+    // The operator's OWN walk transcripts, on their OWN disk (~/.walkie/transcripts/, daily
+    // JSONL, #build skipped). Local only — never leaves the machine. Default ON: the brain
+    // dump is the point of a walk and it belongs to them. "transcripts": false turns it off.
+    transcripts: true,
     factoryRoot: null,                  // optional: a monorepo/portfolio root for Mara's "eyes"; null = no factory
     stateDir: join(homedir(), '.walkie'),
     directorName: 'Director',           // replaces the old hardcoded "Paul"
@@ -119,6 +123,7 @@ function envOverrides() {
   }
   if (process.env.WALKIE_JAIL_PROFILE != null) o.jailProfile = process.env.WALKIE_JAIL_PROFILE !== '0';
   if (process.env.WALKIE_TELEMETRY != null) o.telemetry = process.env.WALKIE_TELEMETRY !== '0';
+  if (process.env.WALKIE_TRANSCRIPTS != null) o.transcripts = process.env.WALKIE_TRANSCRIPTS !== '0';
   return o;
 }
 

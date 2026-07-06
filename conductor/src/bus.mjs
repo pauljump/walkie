@@ -21,6 +21,7 @@
 
 import { LocalBus } from './local-bus.mjs';
 import { spawnClaudeWorker } from './spawn-claude.mjs';
+import { recordMessage } from './transcripts.mjs';
 import { loadConfig, validateConfig } from './config.mjs';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -60,11 +61,14 @@ class LocalConductor {
   async start() {
     await this.bus.start();
     // Observe every published message (REST posts from the phone + our own publishes). This is the
-    // inbound side: the phone's Director directives arrive here and drive watch().
-    this.bus.on('message', ({ from, text, channel }) => {
+    // inbound side: the phone's Director directives arrive here and drive watch(). Every observed
+    // message is also appended to the operator's OWN transcript on disk (local only, off switch
+    // in config, #build skipped) — the walk's brain dump is theirs to keep.
+    this.bus.on('message', ({ from, text, channel, seq }) => {
       if (!text) return;
       const ch = (channel || 'standup');
       this.feed.push({ from, text, channel: ch });
+      recordMessage({ channel: ch, from, text, seq });
       this.log(`  [#${ch}] ${from}: ${text.slice(0, 120)}`);
       for (const fn of this.listeners) { try { fn({ from, text, channel: ch }); } catch {} }
     });
