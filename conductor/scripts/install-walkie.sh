@@ -71,6 +71,13 @@ print_pairing_qr() { # print_pairing_qr <url> <host> <port> <key>
   if have qrencode; then
     qrencode -t ANSIUTF8 "$__url"
     copy "Scan that with your phone's camera and Walkie fills in the address and key for you."
+    # The terminal QR doesn't survive every surface (a Claude Code chat UI mangles the block
+    # characters — found live 2026-07-07). Also write a real image and pop it open on macOS,
+    # so there is always something scannable on screen. ~/.walkie is already private (0700).
+    if qrencode -s 10 -m 4 -o "$HOME/.walkie/pair-qr.png" "$__url" 2>/dev/null; then
+      copy "Also saved as an image: ~/.walkie/pair-qr.png (same code, same password rule)."
+      have open && open "$HOME/.walkie/pair-qr.png" >/dev/null 2>&1 || true
+    fi
   else
     copy "No QR tool installed (optional). Just open Walkie and it offers to fill this in, or type the"
     copy "address and key into Settings by hand: host=$__h port=$__p key=$__k"
@@ -188,8 +195,13 @@ copy "Get the key here: https://console.anthropic.com/settings/keys"
 copy "Click Create Key, copy it, paste it below. It starts with sk-ant."
 copy "No account yet? Signing up is free; the key itself is usage-based. While you are on that page"
 copy "you can set a spend cap so it can never surprise you. One line, optional, your call."
-# Open the exact key page for them on a real run so they do not go hunting. Never in --check.
-if [ "$MODE" = "run" ]; then
+# Open the exact key page for them on a real run so they do not go hunting. Never in --check,
+# and ONLY when a human is actually at this terminal ([ -t 0 ]): when a Claude Code session
+# drives this install (stdin piped), the ask below silently defaults to blank — popping the
+# console page with no prompt to paste into just strands the user on a page with no
+# instructions. (Exactly what happened on the 2026-07-07 stranger test.) The driving agent
+# relays the URL from the copy above instead.
+if [ "$MODE" = "run" ] && [ -t 0 ]; then
   have open && open "https://console.anthropic.com/settings/keys" >/dev/null 2>&1 || true
 else
   act "open the Anthropic keys page (https://console.anthropic.com/settings/keys)"
@@ -389,6 +401,16 @@ print_pairing_qr "$PAIR_URL_LAN" "$PAIR_HOST" "3889" "$BROKER_API_KEY"
 # 9 — Go
 # ────────────────────────────────────────────────────────────────────────────────────────────────
 step "9. Go"
+# If the voice key never got set (the normal case when a Claude Code session drove this
+# install — the step-3 ask defaults to blank when piped), the LAST thing on screen must be
+# the exact fix, so whoever ran this (human or agent) can act on it without hunting.
+if [ -z "${ANTHROPIC_KEY:-}" ]; then
+  no "One thing left: the EM's voice key is still blank. Your phone pairs fine; she just can't"
+  copy "talk yet. Get a key at https://console.anthropic.com/settings/keys (Create Key, name it"
+  copy "walkie, copy the sk-ant-... string, and set a monthly spend cap while you're there)."
+  copy "Then add this line to ~/.walkie/config.json:   \"anthropicApiKey\": \"sk-ant-...\""
+  copy "and re-run this installer (safe, keeps your answers) so the service picks it up."
+fi
 copy "Say the thing. Keep walking. Read the change when you are back."
 copy "First time, try something small, like 'build me a page that says hello.' Watch it show up."
 copy "That is the whole loop."
