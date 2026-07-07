@@ -277,7 +277,20 @@ c.watch({
     // Each Director utterance is its own turn id — that's what the gate keys on so a proposal
     // can only be started on a SEPARATE (later) utterance. Builds still run in the background.
     const did = ++directiveSeq;
-    enqueueTurn(() => mara.respond(directive, makeIo(did)));
+    enqueueTurn(() =>
+      mara.respond(directive, makeIo(did)).catch((err) => {
+        // A failed turn must SPEAK, not vanish into the log — on a walk, silence reads as
+        // "Walkie is broken". The big one is a missing/invalid voice key (Mara can't think
+        // at all); say exactly how to fix it. Found by the 2026-07-07 stranger-path test.
+        log(`directive turn failed: ${err.message}`);
+        const keyProblem = /anthropic|api.?key|authentication|401/i.test(err.message);
+        return c.say(
+          keyProblem
+            ? 'I can hear you, but my voice key is missing or not working on the Mac. Add your Anthropic key as anthropicApiKey in ~/.walkie/config.json, then re-run the installer — it is safe to re-run and picks the key up.'
+            : `I hit a snag thinking about that: ${err.message}. Say it again, and if it repeats, check the conductor log on the Mac.`,
+        );
+      }),
+    );
   },
 });
 

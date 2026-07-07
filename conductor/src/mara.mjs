@@ -162,7 +162,11 @@ const TOOLS = [PROPOSE_TOOL, START_TOOL, CHECK_WORK_TOOL, LIST_PRS_TOOL, READ_PR
 
 export class Mara {
   constructor({ log = () => {}, directorName = 'the Director' } = {}) {
-    this.client = anthropic();
+    // NO anthropic() here: the client is created lazily on the first turn (see respond).
+    // Constructing it eagerly meant a missing voice key crashed the whole conductor at boot —
+    // the room never opened, the phone had nothing to pair with. Keyless boot must work: the
+    // operator pairs first, hears "add your key" on the voice line, and fixes it. (Found by
+    // the 2026-07-07 MacBook stranger-path test.)
     this.log = log;
     this.history = []; // the running conversation — Mara's memory across the walk
     const base = createSystemPrompt(directorName);
@@ -186,10 +190,23 @@ export class Mara {
   // can never accidentally start a build or branch off.
   async respond(event, io, { tools = true } = {}) {
     const { say } = io;
+    const mark = this.history.length;
     this.history.push({ role: 'user', content: event });
 
+    try {
+      await this.#turn(io, say, tools);
+    } catch (err) {
+      // A turn that failed before Mara answered (e.g. no API key yet — anthropic() throws on
+      // first use) must not poison the conversation: drop the event so history still alternates
+      // cleanly once the operator fixes the problem. Mid-turn failures keep their history as-is.
+      if (this.history.length === mark + 1) this.history.pop();
+      throw err;
+    }
+  }
+
+  async #turn(io, say, tools) {
     for (let hop = 0; hop < 4; hop++) {
-      const res = await this.client.messages.create({
+      const res = await anthropic().messages.create({
         model: MODEL,
         max_tokens: 400,
         system: [{ type: 'text', text: this.system, cache_control: { type: 'ephemeral' } }],

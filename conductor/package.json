@@ -18,7 +18,8 @@
     "retry": "node test/retry.mjs",
     "board": "node test/board.mjs",
     "local-bus": "node test/local-bus.mjs",
-    "transcripts": "node test/transcripts.mjs"
+    "transcripts": "node test/transcripts.mjs",
+    "lint-sh": "node test/lint-sh.mjs"
   },
   "dependencies": {
     "@agent-relay/sdk": "8.7.1",

@@ -195,14 +195,17 @@ else
   act "open the Anthropic keys page (https://console.anthropic.com/settings/keys)"
 fi
 ANTHROPIC_KEY=""
-ask ANTHROPIC_KEY "Paste your Anthropic API key (sk-ant-…), or leave blank to add it later in Settings" ""
+ask ANTHROPIC_KEY "Paste your Anthropic API key (sk-ant-…), or leave blank to add it later" ""
 if [ -n "$ANTHROPIC_KEY" ]; then
   case "$ANTHROPIC_KEY" in
     sk-ant-*) ok "key saved. It only runs the voice, nothing else." ;;
     *) no "that did not start with sk-ant-. Double-check it." ;;
   esac
 else
-  no "no key yet. The EM needs it to talk. Add it later in Settings and re-run."
+  no "no key yet. Everything else still works: the room starts, your phone pairs. The EM just"
+  copy "cannot talk until the key exists — she will tell you so out loud. When you have one, add"
+  copy "  \"anthropicApiKey\": \"sk-ant-...\"  to ~/.walkie/config.json and re-run this installer"
+  copy "(safe to re-run, keeps your answers) — or just re-run it and paste the key at this step."
 fi
 
 # ────────────────────────────────────────────────────────────────────────────────────────────────
