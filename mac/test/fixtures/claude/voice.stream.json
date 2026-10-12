@@ -1,0 +1,1870 @@
+[
+ {
+  "type": "system",
+  "subtype": "init",
+  "model": "claude-haiku-4-5-20251001",
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "a9e46f1a-f06f-44cc-89e7-ea81cc0e2d0f",
+  "cwd": "/tmp/fixture",
+  "permissionMode": "default",
+  "claude_code_version": "2.1.280",
+  "slash_commands": [
+   "review"
+  ]
+ },
+ {
+  "type": "system",
+  "subtype": "status",
+  "status": "requesting",
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "a9482a09-a09a-4406-b13b-455d7291642a"
+ },
+ {
+  "type": "rate_limit_event",
+  "rate_limit_info": {
+   "status": "allowed",
+   "resetsAt": 1790289000,
+   "rateLimitType": "five_hour",
+   "overageStatus": "rejected",
+   "overageDisabledReason": "out_of_credits",
+   "isUsingOverage": false,
+   "unifiedWindows": {
+    "five_hour": {
+     "utilization": 0.12,
+     "resetsAt": 1790289000
+    },
+    "seven_day": {
+     "utilization": 0.3,
+     "resetsAt": 1790654400
+    }
+   }
+  },
+  "uuid": "49a0187c-3490-4fa8-8efb-10f3698bb4a5",
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "message_start",
+   "message": {
+    "model": "claude-haiku-4-5-20251001",
+    "id": "msg_011CfNmCB7MBSrMSZSeazJMp",
+    "type": "message",
+    "role": "assistant",
+    "content": [],
+    "container": null,
+    "stop_reason": null,
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+     "input_tokens": 10,
+     "cache_creation_input_tokens": 22569,
+     "cache_read_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 22569
+     },
+     "output_tokens": 4,
+     "service_tier": "standard",
+     "inference_geo": "not_available"
+    },
+    "input_transformations": [],
+    "diagnostics": null,
+    "context_management": null
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "4d0bd834-cdaa-41e4-a70a-73d3847e7d43",
+  "ttft_ms": 710
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_start",
+   "index": 0,
+   "content_block": {
+    "type": "thinking",
+    "thinking": "",
+    "signature": ""
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "17a6a6d8-780f-4bc2-a9d5-15c7ffbe4c22"
+ },
+ {
+  "type": "system",
+  "subtype": "thinking_tokens",
+  "estimated_tokens": 50,
+  "estimated_tokens_delta": 50,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "a6e5b01b-4660-49bc-a43f-c038698562be"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 0,
+   "delta": {
+    "type": "thinking_delta",
+    "thinking": "",
+    "estimated_tokens": 50
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "928a54ab-6309-4633-9323-e4afbe3337c1"
+ },
+ {
+  "type": "system",
+  "subtype": "thinking_tokens",
+  "estimated_tokens": 150,
+  "estimated_tokens_delta": 100,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "1b131960-9480-4f7f-9f33-169882410d20"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 0,
+   "delta": {
+    "type": "thinking_delta",
+    "thinking": "",
+    "estimated_tokens": 100
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "8c60a20a-6953-4132-8d6a-3ef37e05c68a"
+ },
+ {
+  "type": "system",
+  "subtype": "thinking_tokens",
+  "estimated_tokens": 250,
+  "estimated_tokens_delta": 100,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "8053e46b-cd14-431f-a4d3-1169a4a265e5"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 0,
+   "delta": {
+    "type": "thinking_delta",
+    "thinking": "",
+    "estimated_tokens": 100
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "f00b2c0c-9eb6-4ab1-8ad8-6db3ec96644d"
+ },
+ {
+  "type": "system",
+  "subtype": "thinking_tokens",
+  "estimated_tokens": 350,
+  "estimated_tokens_delta": 100,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "b602a4a0-6251-49d8-99f2-a945c149a9eb"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 0,
+   "delta": {
+    "type": "thinking_delta",
+    "thinking": "",
+    "estimated_tokens": 100
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "2dcf7b2e-38d9-46db-af8e-7555595dfdb2"
+ },
+ {
+  "type": "system",
+  "subtype": "thinking_tokens",
+  "estimated_tokens": 450,
+  "estimated_tokens_delta": 100,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "955b10ad-8133-4658-806d-144fcff59f45"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 0,
+   "delta": {
+    "type": "thinking_delta",
+    "thinking": "",
+    "estimated_tokens": 100
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "f4fb8999-3404-4db5-b7b6-3d2d5966ac56"
+ },
+ {
+  "type": "system",
+  "subtype": "thinking_tokens",
+  "estimated_tokens": 500,
+  "estimated_tokens_delta": 50,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "3f8d20d6-80df-415d-920d-faa11427f6df"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 0,
+   "delta": {
+    "type": "thinking_delta",
+    "thinking": "",
+    "estimated_tokens": 50
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "6ac45ff9-6357-40c2-b547-b1efd1f70c63"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 0,
+   "delta": {
+    "type": "thinking_delta",
+    "thinking": "",
+    "estimated_tokens": null
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "ed9c1366-3924-4028-858a-980dbf546a3f"
+ },
+ {
+  "type": "system",
+  "subtype": "thinking_tokens",
+  "estimated_tokens": 606,
+  "estimated_tokens_delta": 106,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "af58b1b0-c937-477c-9d77-3c3a7a4b0ca1"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 0,
+   "delta": {
+    "type": "signature_delta",
+    "signature": ""
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "7e5fa507-5cdc-4720-8aa3-2cafdf090951"
+ },
+ {
+  "type": "assistant",
+  "message": {
+   "model": "claude-haiku-4-5-20251001",
+   "id": "msg_011CfNmCB7MBSrMSZSeazJMp",
+   "type": "message",
+   "role": "assistant",
+   "content": [
+    {
+     "type": "thinking",
+     "thinking": "",
+     "signature": ""
+    }
+   ],
+   "container": null,
+   "stop_reason": null,
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 22569,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 22569
+    },
+    "output_tokens": 4,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+   },
+   "input_transformations": [],
+   "diagnostics": null,
+   "context_management": null
+  },
+  "parent_tool_use_id": null,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "914006a1-0355-4cf2-944c-51aa85fba425",
+  "timestamp": "2026-09-24T18:47:32.571Z",
+  "request_id": "req_011CfNmCAeZsc61KcWUBZom4"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_stop",
+   "index": 0
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "e5b19a98-583e-4977-9473-f5b7c9327088"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_start",
+   "index": 1,
+   "content_block": {
+    "type": "text",
+    "text": ""
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "979f5c14-9d53-42d9-abd8-004168352fb7"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "**"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "74c6c5a3-f127-44a8-8b84-ebdd541af4cf"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "SwiftUI**"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "c58a8bdf-43f8-45b9-8c14-13fa7947a47c"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " —"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "4f6ef100-57d5-4f7e-b4eb-61a07b5b1986"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " native"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "346a059b-2e5c-4c96-98fd-b8849e977285"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " platform"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "9137d736-4809-49e6-847c-ff373307c2da"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " play"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "ae860b3c-f96f-47a7-a1b1-0aa2f39bcb13"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ","
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "1c662512-696b-4aaf-9f63-e1cc48b6a24e"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " best UX/"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "1b1d78b0-6211-45bd-af8e-9dd1b0d72673"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "performance for"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "b1e3c3e8-73ae-4943-8040-b5c5cfb37820"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " iOS."
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "9fd9f9cf-79f4-4690-a235-0840c24df361"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " Only"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "bd6455c8-0f37-49de-893c-af6716de7dc8"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " bet"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "1a273064-d653-40ee-a106-9d8a74aa6552"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " React"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "b13d6934-07ee-4e98-9515-ba6c750f41c2"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " Native if you need"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "ce549116-cd23-4f01-be0c-3e0b09ac01b0"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " Android"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "d637de9c-a051-44c2-9bef-188a10f3ec6e"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " p"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "be4adeec-7244-443d-87f3-87baf673cebf"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "arity too"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "f138bb19-580f-4445-b1f6-174a1354d4e2"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ".\n\n**la"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "a844450c-28a2-4ffd-9dca-a6867439d50a"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "unchd** —"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "a5a3075b-d8ef-4eed-b73c-59bf72079683"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " it"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "35848f97-8268-44bf-bca8-4079c2b65990"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "'s the"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "5892adb8-98c1-4d50-89d5-1f0ed63ec265"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " mac"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "ef191179-6612-44b9-8482-3a0c2bf6bfab"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "OS-"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "9989c93a-49fb-4cff-824b-a6f377bb9c31"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "native answer"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "6a47ef0e-7d87-4c99-a274-85fa1e030514"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ". PM"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "120856ce-bf75-475c-9266-01a957ba0234"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "2 works"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "f787a927-4089-45c3-9cc7-eb7739459753"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " if the"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "c50479e4-926b-410c-a4b4-2375af820190"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " bridge"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "978664fe-ca71-446e-bc08-86f1cfbcf499"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " is Node-based"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "aa0e7362-7160-48bc-9a17-e08eb088c85f"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ", but launch"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "43890b1f-6f21-4bf8-bcd4-59a26760f0e8"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "d is built"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "34ca335c-3549-4570-8f12-f5852d41d9a4"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " for exactly"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "ac5dea5a-6f27-4a0c-95a7-0d48dc9ba453"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " this ("
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "c826644c-ee3b-4057-aa17-45075a8a54e0"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "persistent services"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "71be98aa-f928-404c-bd4d-a0816dbc4db0"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ", system integration)."
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "8134a9d6-a1fc-45d8-bee2-73d66b92faea"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " Platform"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "2935370c-1859-4d0d-9e23-c4583ff352c5"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "-native beats"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "5662ff21-85f8-4404-9f2d-702bbd81b108"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " generic"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "45ec0b73-e284-430d-acde-d2215c464ba9"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " process managers."
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "86ad24f9-c7fc-4255-bc03-7ff1a10a265c"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "\n\n**Queue"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "ec5fd07e-67c7-42bd-8dc4-0e0a50cd54a6"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " offline"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "793a3448-3e87-4175-a024-7963af200eee"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " messages"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "05e9b392-f6c4-4d77-8ffc-50fa46729272"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "** — worth"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "ef76066a-ccd1-44e9-88a6-a93c2a813188"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " the complexity."
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "1e2c463d-da43-48e9-bc69-89fd48539bc8"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " Phone"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "69115d11-4fbd-43e1-ac33-5a169fbddc28"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " apps hit"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "35c7e2a5-2f23-42e6-a928-7b39990346c0"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " spot"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "689fb95c-3092-4189-8ef0-3c7c4e0999f8"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "ty networks constantly"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "cfa9094c-db25-41eb-b4a7-0ca4d1eb9182"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ";"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "3d0dd7b9-370a-40ea-8b10-84cbdfabd291"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " users"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "692c83c4-afcd-4d4d-9d64-4124d007be71"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " expect"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "2b9b0513-74ca-4f9b-8094-c9365bd7cbcf"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " the"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "11811201-bdad-491d-8559-5ad238702759"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " app to absor"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "fb6be84a-fbd3-4064-ab33-f8daf6a4c663"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "b the hi"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "e876f37e-f40d-4398-a6e9-4671c9c02000"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "ccup"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "466a08a9-a204-45a6-86c6-f0895db6f8bd"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ". Fire"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "56011191-96d5-42bd-a1db-1bcb0eca068e"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "-"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "0479696f-68a6-46d8-9874-fb8b033c7d7f"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "and-forget failures"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "b3000451-e309-459b-b36b-f0ddd92c42b6"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " feel"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "0e58809e-9d52-4018-8c8f-3a6da03137a9"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " broken"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "9ed395d6-021f-438c-b1be-4d19fbced89b"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ".\n\n**"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "d0a6dc67-3c67-41e2-99e6-9e7800b30d92"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "Tailscale is"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "f0226f0b-2d98-4731-ab0d-f142e4ba862b"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " fine** — solid"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "612c8ca8-03aa-4757-9c99-b721f902aa5b"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " for internal"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "24f7a136-bb9c-49ce-b664-1eea2e824596"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "/"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "6ad1afb0-7c42-4f7b-965a-73a5499a7a2d"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "dev access. Just"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "4eee9ed3-67af-478f-9245-09c7a8aafe6a"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " clar"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "0533f93a-36dc-4670-b3f4-52f928a4bf13"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "ify: if this"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "742fc3ab-9c6c-49b2-a583-728010f24d54"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " is for customer-"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "643043d8-f6a0-4533-87a4-9a2f46a07a5c"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "facing remote features,"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "46f3f94c-aa25-4146-861f-83d40493b877"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " you'll want"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "532568e3-7bc4-405e-aa44-978ad430f825"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " formal infrastructure instead"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "172778cf-8302-4b34-9d0c-98d317b858ec"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "."
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "8679d6b9-5a4f-49be-8fcc-902ab2effacb"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " But if"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "43604db7-a473-4d68-aee4-26bba430be13"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " it"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "f0bb55e2-d145-4110-8ceb-ef789ff67774"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "'s your"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "aa219ce8-fc74-4a1c-8f68-fd774e0bf3c6"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " team"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "86e4d271-b9b3-4188-9608-472efafde0e7"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " accessing"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "6aae87b5-70d1-4665-88ca-1e6470f5854d"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " the"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "5e26d6af-de8a-4947-8307-ae38e01dbb49"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " bridge"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "32af5ed5-5ecf-4887-bd08-8799809f2d31"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ","
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "2c78da7f-1f9b-4360-954d-7454eb06328b"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " Tailscale is"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "0d85e8d3-1595-43d1-a8c0-dee7eb59bf87"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " clean"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "7aaebd88-9a5a-4717-aaa2-e3f078590ab3"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " and"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "f39a5362-89e0-4110-b375-58368801b630"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " low"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "1ffec315-7097-4fb6-84e3-fc24aad79df8"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "-ops"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "b2d5297b-96b1-4ab1-9678-9c3aa8584cc8"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "."
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "2d17d392-d722-4690-ad77-e494017f97a6"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "\n\n↳"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "3cc5b56c-a3e6-47b0-879c-530730c6a37e"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " thread"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "0a06f564-0d27-4f3d-9d97-fb6485d839f4"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": ": which"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "7e0f9e88-486f-4252-9692-6df245118ec9"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " of"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "ddc36105-be91-4e46-afb1-919d4bb550fd"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " these is closest"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "54a0ffcf-2c0c-4296-8335-5c063a017fbe"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " to uncertain"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "41c2857a-849b-433c-ac28-2d86c8765af8"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": " for your use case"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "cbd9251a-7265-43bc-a81e-92c1e3843ec0"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_delta",
+   "index": 1,
+   "delta": {
+    "type": "text_delta",
+    "text": "?"
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "0e22054f-00a7-4f16-a5a5-8b81a2f69263"
+ },
+ {
+  "type": "assistant",
+  "message": {
+   "model": "claude-haiku-4-5-20251001",
+   "id": "msg_011CfNmCB7MBSrMSZSeazJMp",
+   "type": "message",
+   "role": "assistant",
+   "content": [
+    {
+     "type": "text",
+     "text": "**SwiftUI** — native platform play, best UX/performance for iOS. Only bet React Native if you need Android parity too.\n\n**launchd** — it's the macOS-native answer. PM2 works if the bridge is Node-based, but launchd is built for exactly this (persistent services, system integration). Platform-native beats generic process managers.\n\n**Queue offline messages** — worth the complexity. Phone apps hit spotty networks constantly; users expect the app to absorb the hiccup. Fire-and-forget failures feel broken.\n\n**Tailscale is fine** — solid for internal/dev access. Just clarify: if this is for customer-facing remote features, you'll want formal infrastructure instead. But if it's your team accessing the bridge, Tailscale is clean and low-ops.\n\n↳ thread: which of these is closest to uncertain for your use case?"
+    }
+   ],
+   "container": null,
+   "stop_reason": null,
+   "stop_sequence": null,
+   "stop_details": null,
+   "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 22569,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 22569
+    },
+    "output_tokens": 4,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+   },
+   "input_transformations": [],
+   "diagnostics": null,
+   "context_management": null
+  },
+  "parent_tool_use_id": null,
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "uuid": "7070e59f-9099-4109-bb59-937fcd8ec41f",
+  "timestamp": "2026-09-24T18:47:35.043Z",
+  "request_id": "req_011CfNmCAeZsc61KcWUBZom4"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "content_block_stop",
+   "index": 1
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "4e9c3dc4-415f-4328-9494-36c5adacc36e"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "message_delta",
+   "delta": {
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "container": null
+   },
+   "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 22569,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 735,
+    "output_tokens_details": {
+     "thinking_tokens": 530
+    },
+    "iterations": [
+     {
+      "input_tokens": 10,
+      "output_tokens": 735,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 22569,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 22569
+      },
+      "type": "message"
+     }
+    ]
+   },
+   "context_management": {
+    "applied_edits": []
+   }
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "9bf8f12f-0b11-446e-983f-8f91a7f8d39c"
+ },
+ {
+  "type": "stream_event",
+  "event": {
+   "type": "message_stop"
+  },
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "parent_tool_use_id": null,
+  "uuid": "3a3950d9-41e8-403c-ba25-cc4fdfd624ca"
+ },
+ {
+  "type": "system",
+  "subtype": "post_turn_summary",
+  "summarizes_uuid": "7070e59f-9099-4109-bb59-937fcd8ec41f",
+  "status_category": "blocked",
+  "status_detail": "↳ thread: which of these is closest to uncertain for your use case?",
+  "needs_action": "↳ thread: which of these is closest to uncertain for your use case?",
+  "uuid": "3bbd6248-b593-49de-b362-4807a3f7de1c",
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0"
+ },
+ {
+  "duration_api_ms": 10402,
+  "stop_reason": "end_turn",
+  "session_id": "584e0d84-08bb-4500-989e-759f74371be0",
+  "total_cost_usd": 0.049838,
+  "usage": {
+   "input_tokens": 10,
+   "cache_creation_input_tokens": 22569,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 735,
+   "output_tokens_details": {
+    "thinking_tokens": 530
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 22569,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 10,
+     "output_tokens": 735,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 22569,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 22569
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 965,
+    "outputTokens": 747,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 22569,
+    "webSearchRequests": 0,
+    "costUSD": 0.049838,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 530,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "**SwiftUI** — native platform play, best UX/performance for iOS. Only bet React Native if you need Android parity too.\n\n**launchd** — it's the macOS-native answer. PM2 works if the bridge is Node-based, but launchd is built for exactly this (persistent services, system integration). Platform-native beats generic process managers.\n\n**Queue offline messages** — worth the complexity. Phone apps hit spotty networks constantly; users expect the app to absorb the hiccup. Fire-and-forget failures feel broken.\n\n**Tailscale is fine** — solid for internal/dev access. Just clarify: if this is for customer-facing remote features, you'll want formal infrastructure instead. But if it's your team accessing the bridge, Tailscale is clean and low-ops.\n\n↳ thread: which of these is closest to uncertain for your use case?",
+  "ttft_ms": 7149,
+  "type": "result",
+  "duration_ms": 9696,
+  "uuid": "4c846d7e-7dcc-491c-a215-50ab94d2008e",
+  "ttft_stream_ms": 749,
+  "time_to_request_ms": 39,
+  "first_content_frame_ms": 750,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+]

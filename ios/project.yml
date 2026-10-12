@@ -7,9 +7,9 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    MARKETING_VERSION: "1.0.0"
+    MARKETING_VERSION: "3.0.0"
     CURRENT_PROJECT_VERSION: "1"
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: ""  # your Apple Developer team id
 targets:
   Walkie:
     type: application
@@ -20,13 +20,43 @@ targets:
     settings:
       base:
         INFOPLIST_FILE: Walkie/Sources/App/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Walkie/Sources/App/Walkie.entitlements
         PRODUCT_BUNDLE_IDENTIFIER: cc.walkie.app
         TARGETED_DEVICE_FAMILY: "1"
         SUPPORTED_INTERFACE_ORIENTATIONS: "UIInterfaceOrientationPortrait"
+  WalkieUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: WalkieUITests
+    dependencies:
+      - target: Walkie
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: cc.walkie.uitests
+        TEST_TARGET_NAME: Walkie
+  WalkieTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: WalkieTests
+    dependencies:
+      - target: Walkie
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: cc.walkie.tests
 schemes:
   Walkie:
     build:
       targets:
         Walkie: all
+        WalkieTests: [test]
+    test:
+      targets:
+        - WalkieTests
+        - WalkieUITests
     run:
       config: Debug
+      storeKitConfiguration: Walkie/Walkie.storekit

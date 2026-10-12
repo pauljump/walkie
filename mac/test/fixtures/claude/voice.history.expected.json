@@ -1,0 +1,12 @@
+[
+ {
+  "id": "e1",
+  "kind": "user",
+  "text": "Quick gut check on four things for a phone app I'm building: should it use SwiftUI or React Native, should the Mac bridge run under launchd or PM2, should offline messages queue on the phone, and is Tailscale fine for remote access? Don't look at any files."
+ },
+ {
+  "id": "e2",
+  "kind": "text",
+  "text": "**SwiftUI** — native platform play, best UX/performance for iOS. Only bet React Native if you need Android parity too.\n\n**launchd** — it's the macOS-native answer. PM2 works if the bridge is Node-based, but launchd is built for exactly this (persistent services, system integration). Platform-native beats generic process managers.\n\n**Queue offline messages** — worth the complexity. Phone apps hit spotty networks constantly; users expect the app to absorb the hiccup. Fire-and-forget failures feel broken.\n\n**Tailscale is fine** — solid for internal/dev access. Just clarify: if this is for customer-facing remote features, you'll want formal infrastructure instead. But if it's your team accessing the bridge, Tailscale is clean and low-ops.\n\n↳ thread: which of these is closest to uncertain for your use case?"
+ }
+]

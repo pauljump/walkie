@@ -1,0 +1,21 @@
+[
+ {
+  "id": "e1",
+  "kind": "user",
+  "text": "Work only in the current folder. Keep every reply to one short sentence.\n1. Read notes.txt.\n2. Run: ls\n3. Run: cat missing.txt (it will fail, that's expected).\n4. In notes.txt change the word blue to green.\n5. Create done.txt containing: ok\n6. Make a short todo list of the steps you did, all marked completed.\nThen say \"Finished.\"",
+  "seq": 2
+ },
+ {
+  "id": "e2",
+  "kind": "error",
+  "text": "Codex usage limit reached. It resets Sep 26th, 2026 4:44 AM.",
+  "seq": 3
+ },
+ {
+  "id": "e3",
+  "kind": "result",
+  "ok": false,
+  "durationMs": 3112,
+  "seq": 4
+ }
+]

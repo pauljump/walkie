@@ -1,0 +1,40 @@
+{
+  "identifier" : "F0C0B4B2-5D5C-4E9A-9A8E-6B1A9C2D3E4F",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "29.99",
+      "familyShareable" : true,
+      "internalID" : "1A2B3C4D",
+      "localizations" : [
+        {
+          "description" : "Every CLI you pay for, continue on another plan, send to projects.",
+          "displayName" : "Walkie for all subscriptions",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "cc.walkie.all",
+      "referenceName" : "All subscriptions",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6787685702",
+    "_developerTeamID" : "",
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

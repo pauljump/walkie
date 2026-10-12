@@ -1,0 +1,341 @@
+[
+ {
+  "response": "initialize",
+  "result": {
+   "userAgent": "walkie-fixture/0.154.0 (Mac OS 26.6.2; arm64) Apple_Terminal/470.2 (walkie-fixture; 0)",
+   "codexHome": "/Users/you/.codex",
+   "platformFamily": "unix",
+   "platformOs": "macos"
+  }
+ },
+ {
+  "response": "thread/start",
+  "result": {
+   "thread": {
+    "id": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+    "environments": [
+     {
+      "environmentId": "local",
+      "cwd": "/tmp/fixture",
+      "runtimeWorkspaceRoots": [
+       "/tmp/fixture"
+      ]
+     }
+    ],
+    "extra": null,
+    "sessionId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+    "forkedFromId": null,
+    "parentThreadId": null,
+    "preview": "",
+    "ephemeral": false,
+    "section": null,
+    "sectionEnteredAt": null,
+    "projectId": null,
+    "historyMode": "paginated",
+    "modelProvider": "openai",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "low",
+    "createdAt": 1790266167,
+    "updatedAt": 1790266167,
+    "recencyAt": 1790266167,
+    "status": {
+     "type": "idle"
+    },
+    "path": "/Users/you/.codex/sessions/2026/09/24/rollout-2026-09-24T12-09-26-01a0d42d-ce53-7b43-b866-607b65ec543b.jsonl",
+    "cwd": "/tmp/fixture",
+    "cliVersion": "0.154.0",
+    "originator": "walkie-fixture",
+    "source": "vscode",
+    "canAcceptDirectInput": true,
+    "threadSource": null,
+    "agentNickname": null,
+    "agentRole": null,
+    "gitInfo": null,
+    "name": null,
+    "daybreakEnabled": null,
+    "turns": []
+   },
+   "model": "gpt-6-astra",
+   "modelProvider": "openai",
+   "serviceTier": null,
+   "cwd": "/tmp/fixture",
+   "runtimeWorkspaceRoots": [
+    "/tmp/fixture"
+   ],
+   "instructionSources": [
+    "/Users/you/.codex/AGENTS.md"
+   ],
+   "approvalPolicy": "never",
+   "approvalsReviewer": "user",
+   "sandbox": {
+    "type": "workspaceWrite",
+    "writableRoots": [],
+    "networkAccess": false,
+    "excludeTmpdirEnvVar": false,
+    "excludeSlashTmp": false
+   },
+   "activePermissionProfile": null,
+   "reasoningEffort": "low",
+   "multiAgentMode": "explicitRequestOnly"
+  }
+ },
+ {
+  "method": "thread/started",
+  "params": {
+   "thread": {
+    "id": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+    "environments": [
+     {
+      "environmentId": "local",
+      "cwd": "/tmp/fixture",
+      "runtimeWorkspaceRoots": [
+       "/tmp/fixture"
+      ]
+     }
+    ],
+    "extra": null,
+    "sessionId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+    "forkedFromId": null,
+    "parentThreadId": null,
+    "preview": "",
+    "ephemeral": false,
+    "section": null,
+    "sectionEnteredAt": null,
+    "projectId": null,
+    "historyMode": "paginated",
+    "modelProvider": "openai",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "low",
+    "createdAt": 1790266167,
+    "updatedAt": 1790266167,
+    "recencyAt": 1790266167,
+    "status": {
+     "type": "idle"
+    },
+    "path": "/Users/you/.codex/sessions/2026/09/24/rollout-2026-09-24T12-09-26-01a0d42d-ce53-7b43-b866-607b65ec543b.jsonl",
+    "cwd": "/tmp/fixture",
+    "cliVersion": "0.154.0",
+    "originator": "walkie-fixture",
+    "source": "vscode",
+    "canAcceptDirectInput": true,
+    "threadSource": null,
+    "agentNickname": null,
+    "agentRole": null,
+    "gitInfo": null,
+    "name": null,
+    "daybreakEnabled": null,
+    "turns": []
+   }
+  }
+ },
+ {
+  "response": "turn/start",
+  "result": {
+   "turn": {
+    "id": "01a0d42d-cee7-7c71-86f2-36178ad83f27",
+    "items": [],
+    "itemsView": "notLoaded",
+    "status": "inProgress",
+    "error": null,
+    "startedAt": null,
+    "completedAt": null,
+    "durationMs": null
+   }
+  }
+ },
+ {
+  "method": "thread/status/changed",
+  "params": {
+   "threadId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+   "status": {
+    "type": "active",
+    "activeFlags": []
+   }
+  }
+ },
+ {
+  "method": "turn/started",
+  "params": {
+   "threadId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+   "turn": {
+    "id": "01a0d42d-cee7-7c71-86f2-36178ad83f27",
+    "items": [],
+    "itemsView": "notLoaded",
+    "status": "inProgress",
+    "error": null,
+    "startedAt": 1790266167,
+    "completedAt": null,
+    "durationMs": null
+   }
+  }
+ },
+ {
+  "method": "item/started",
+  "params": {
+   "item": {
+    "type": "userMessage",
+    "id": "01a0d42d-d6e7-7d02-9bb5-b8bedcdc4a84",
+    "clientId": null,
+    "content": [
+     {
+      "type": "text",
+      "text": "Work only in the current folder. Keep every reply to one short sentence.\n1. Read notes.txt.\n2. Run: ls\n3. Run: cat missing.txt (it will fail, that's expected).\n4. In notes.txt change the word blue to green.\n5. Create done.txt containing: ok\n6. Make a short todo list of the steps you did, all marked completed.\nThen say \"Finished.\"",
+      "text_elements": []
+     }
+    ]
+   },
+   "threadId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+   "turnId": "01a0d42d-cee7-7c71-86f2-36178ad83f27",
+   "startedAtMs": 1790266169063
+  }
+ },
+ {
+  "method": "item/completed",
+  "params": {
+   "item": {
+    "type": "userMessage",
+    "id": "01a0d42d-d6e7-7d02-9bb5-b8bedcdc4a84",
+    "clientId": null,
+    "content": [
+     {
+      "type": "text",
+      "text": "Work only in the current folder. Keep every reply to one short sentence.\n1. Read notes.txt.\n2. Run: ls\n3. Run: cat missing.txt (it will fail, that's expected).\n4. In notes.txt change the word blue to green.\n5. Create done.txt containing: ok\n6. Make a short todo list of the steps you did, all marked completed.\nThen say \"Finished.\"",
+      "text_elements": []
+     }
+    ]
+   },
+   "threadId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+   "turnId": "01a0d42d-cee7-7c71-86f2-36178ad83f27",
+   "completedAtMs": 1790266169063
+  }
+ },
+ {
+  "method": "thread/status/changed",
+  "params": {
+   "threadId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+   "status": {
+    "type": "systemError"
+   }
+  }
+ },
+ {
+  "method": "error",
+  "params": {
+   "error": {
+    "message": "You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at Sep 26th, 2026 4:44 AM.",
+    "codexErrorInfo": "usageLimitExceeded",
+    "additionalDetails": null,
+    "misalignment": null
+   },
+   "willRetry": false,
+   "threadId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+   "turnId": "01a0d42d-cee7-7c71-86f2-36178ad83f27"
+  }
+ },
+ {
+  "method": "turn/completed",
+  "params": {
+   "threadId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+   "turn": {
+    "id": "01a0d42d-cee7-7c71-86f2-36178ad83f27",
+    "items": [],
+    "itemsView": "notLoaded",
+    "status": "failed",
+    "error": {
+     "message": "You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at Sep 26th, 2026 4:44 AM.",
+     "codexErrorInfo": "usageLimitExceeded",
+     "additionalDetails": null,
+     "misalignment": null
+    },
+    "startedAt": 1790266167,
+    "completedAt": 1790266170,
+    "durationMs": 3112
+   }
+  }
+ },
+ {
+  "method": "deprecationNotice",
+  "params": {
+   "summary": "Full-history hydration is deprecated for paginated threads; omit `includeTurns` or set it to `false`, then page with `thread/turns/list` and `thread/items/list`.",
+   "details": null
+  }
+ },
+ {
+  "response": "thread/read",
+  "result": {
+   "thread": {
+    "id": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+    "environments": [
+     {
+      "environmentId": "local",
+      "cwd": "/tmp/fixture",
+      "runtimeWorkspaceRoots": [
+       "/tmp/fixture"
+      ]
+     }
+    ],
+    "extra": null,
+    "sessionId": "01a0d42d-ce53-7b43-b866-607b65ec543b",
+    "forkedFromId": null,
+    "parentThreadId": null,
+    "preview": "Work only in the current folder. Keep every reply to one short sentence.\n1. Read notes.txt.\n2. Run: ls\n3. Run: cat missing.txt (it will fail, that's expected).\n4. In notes.txt change the word blue to green.\n5. Create done.txt containing: ok\n6. Make a short todo list of the steps you did, all marked completed.\nThen say \"Finished.\"",
+    "ephemeral": false,
+    "section": null,
+    "sectionEnteredAt": null,
+    "projectId": null,
+    "historyMode": "paginated",
+    "modelProvider": "openai",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "low",
+    "createdAt": 1790266166,
+    "updatedAt": 1790266170,
+    "recencyAt": 1790266167,
+    "status": {
+     "type": "systemError"
+    },
+    "path": "/Users/you/.codex/sessions/2026/09/24/rollout-2026-09-24T12-09-26-01a0d42d-ce53-7b43-b866-607b65ec543b.jsonl",
+    "cwd": "/tmp/fixture",
+    "cliVersion": "0.154.0",
+    "originator": "walkie-fixture",
+    "source": "vscode",
+    "canAcceptDirectInput": true,
+    "threadSource": null,
+    "agentNickname": null,
+    "agentRole": null,
+    "gitInfo": null,
+    "name": null,
+    "daybreakEnabled": null,
+    "turns": [
+     {
+      "id": "01a0d42d-cee7-7c71-86f2-36178ad83f27",
+      "items": [
+       {
+        "type": "userMessage",
+        "id": "01a0d42d-d6e7-7d02-9bb5-b8bedcdc4a84",
+        "clientId": null,
+        "content": [
+         {
+          "type": "text",
+          "text": "Work only in the current folder. Keep every reply to one short sentence.\n1. Read notes.txt.\n2. Run: ls\n3. Run: cat missing.txt (it will fail, that's expected).\n4. In notes.txt change the word blue to green.\n5. Create done.txt containing: ok\n6. Make a short todo list of the steps you did, all marked completed.\nThen say \"Finished.\"",
+          "text_elements": []
+         }
+        ]
+       }
+      ],
+      "itemsView": "full",
+      "status": "failed",
+      "error": {
+       "message": "You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at Sep 26th, 2026 4:44 AM.",
+       "codexErrorInfo": "usageLimitExceeded",
+       "additionalDetails": null,
+       "misalignment": null
+      },
+      "startedAt": 1790266167,
+      "completedAt": 1790266170,
+      "durationMs": 3112
+     }
+    ]
+   }
+  }
+ }
+]

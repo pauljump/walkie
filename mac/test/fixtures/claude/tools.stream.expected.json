@@ -1,0 +1,81 @@
+[
+ {
+  "id": "e1",
+  "kind": "user",
+  "text": "Run the scripted task",
+  "seq": 1
+ },
+ {
+  "id": "e2",
+  "kind": "tool",
+  "tool": "Read",
+  "status": "ok",
+  "title": "Read /tmp/fixture/notes.txt",
+  "seq": 3,
+  "output": "1\tThe sky is blue.\n2\tThe sea is blue too.\n3\t"
+ },
+ {
+  "id": "e3",
+  "kind": "tool",
+  "tool": "Bash",
+  "status": "ok",
+  "title": "$ ls",
+  "detail": "List files in current directory",
+  "seq": 5,
+  "output": "notes.txt"
+ },
+ {
+  "id": "e4",
+  "kind": "tool",
+  "tool": "Bash",
+  "status": "error",
+  "title": "$ cat missing.txt",
+  "detail": "Try to read missing.txt (expected to fail)",
+  "seq": 7,
+  "output": "Exit code 1\ncat: missing.txt: No such file or directory"
+ },
+ {
+  "id": "e5",
+  "kind": "tool",
+  "tool": "Edit",
+  "status": "ok",
+  "title": "Edit /tmp/fixture/notes.txt",
+  "diff": "--- /tmp/fixture/notes.txt\n+++ /tmp/fixture/notes.txt\n-The sky is blue.\n-The sea is blue too.\n+The sky is green.\n+The sea is green too.",
+  "seq": 9,
+  "output": "The file /tmp/fixture/notes.txt has been updated successfully. (file state is current in your context — no need to Read it back)"
+ },
+ {
+  "id": "e6",
+  "kind": "tool",
+  "tool": "Write",
+  "status": "ok",
+  "title": "Write /tmp/fixture/done.txt",
+  "diff": "+ok",
+  "seq": 11,
+  "output": "File created successfully at: /tmp/fixture/done.txt (file state is current in your context — no need to Read it back)"
+ },
+ {
+  "id": "e7",
+  "kind": "tool",
+  "tool": "Write",
+  "status": "ok",
+  "title": "Write /tmp/fixture/TODO.md",
+  "diff": "+- [x] Read notes.txt\n+- [x] Run ls\n+- [x] Run cat missing.txt (expected failure)\n+- [x] Change blue to green in notes.txt\n+- [x] Create done.txt with ok\n+- [x] Make completed todo list\n+",
+  "seq": 13,
+  "output": "File created successfully at: /tmp/fixture/TODO.md (file state is current in your context — no need to Read it back)"
+ },
+ {
+  "id": "e8",
+  "kind": "text",
+  "text": "Finished.",
+  "seq": 14
+ },
+ {
+  "id": "e9",
+  "kind": "result",
+  "ok": true,
+  "costUsd": 0.0639026,
+  "durationMs": 12078,
+  "seq": 15
+ }
+]
