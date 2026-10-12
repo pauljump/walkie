@@ -7,7 +7,8 @@ in front of them: one native chat for all of them, meters for every plan, and th
 multi-subscription client can do: continue a conversation on another plan when one runs out, and
 turn one planning conversation into one session per project.
 
-- App: [walkie.cc](https://walkie.cc) (App Store; free for one subscription, one purchase for all)
+- App: [walkie.cc](https://walkie.cc) (App Store; free for one subscription, $9.99 once for all of them)
+- Build it yourself, free: [the exact prompt](docs/BUILD-IT-YOURSELF.md) ([walkie.cc/build](https://walkie.cc/build))
 - Mac bridge (this repo, `mac/`): `curl -fsSL https://walkie.cc/install.sh | bash`
 
 Everything runs on machines you own. The phone reaches the Mac over your private network (Tailscale
@@ -22,6 +23,7 @@ bridge strips API keys from its environment so the CLIs always run on your subsc
 | `mac/skill/` | A skill any agent can read to customize Walkie through `~/.walkie/walkie.json`. |
 | `ios/` | The SwiftUI app. `xcodegen generate`, set your team in `project.yml`, open `Walkie.xcodeproj`. |
 | `docs/PRODUCT.md` | Why Walkie is shaped this way, and what it will not become. |
+| `docs/BUILD-IT-YOURSELF.md` | The one-run agent prompt that builds Walkie from scratch. |
 | `docs/SYNC.md` | How Walkie stays in sync with each CLI's own records. |
 | `install.sh` | What `walkie.cc/install.sh` serves. |
 

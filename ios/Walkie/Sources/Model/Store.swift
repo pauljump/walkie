@@ -48,7 +48,7 @@ final class Store {
     /// The first CLI you send on becomes the free one.
     func claim(_ agent: Agent) { if freeHarness == nil { freeHarness = agent } }
 
-    var priceLabel: String { product?.displayPrice ?? "$29.99" }
+    var priceLabel: String { product?.displayPrice ?? "$9.99" }
 
     func start() {
         updates?.cancel()

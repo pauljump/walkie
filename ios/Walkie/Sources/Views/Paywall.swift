@@ -18,9 +18,11 @@ struct PaywallSheet: View {
                     point("square.grid.2x2", "Every CLI you pay for", "Claude Code, Codex, Antigravity and Grok, in one place, on your own logins.")
                     point("arrow.triangle.branch", "Continue on another plan", "When one runs out, the conversation keeps going on another, with its transcript.")
                     point("square.split.2x2", "Send to projects across plans", "One planning conversation becomes one session per project, each on the model you pick.")
-                    point("lock.open", "Yours", "One purchase, every device on your Apple Account. No subscription for the client.")
+                    point("person.crop.circle.badge.checkmark", "Kept up for you", "Built by someone who uses it every day, and kept working as the CLIs change. One purchase, every device on your Apple Account.")
                 }
                 Spacer()
+                Text("Rather build your own? The exact prompt is free at walkie.cc/build.")
+                    .font(.footnote).foregroundStyle(WK.textTertiary)
                 if let e = store.lastError { Text(e).font(.footnote).foregroundStyle(WK.error) }
                 Button {
                     Task { await store.buy(); if store.purchased { dismiss() } }

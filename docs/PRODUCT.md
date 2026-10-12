@@ -38,12 +38,18 @@ skill that teaches agents the contract ships with the bridge (`mac/skill/SKILL.m
 ## Money
 
 - **Free:** one subscription. Everything Walkie does, for the first CLI you use.
-- **Walkie for all subscriptions: $29.99, once.** Every CLI, continue elsewhere across plans, send
-  to projects across plans. Non-consumable in-app purchase `cc.walkie.all`.
+- **Walkie for all subscriptions: $9.99, once.** Every CLI, continue elsewhere across plans, send
+  to projects across plans. Non-consumable in-app purchase `cc.walkie.all`. Less than a domain.
+- **Or build it yourself, free.** walkie.cc/build publishes the exact prompt (docs/BUILD-IT-YOURSELF.md)
+  that builds Walkie in one long agent run, and the source is MIT.
 
-Why one-time: the customer already pays $20–$400 a month in subscriptions. A subscription for the
-client is resentment; a one-time price "less than one month of what you already pay" is a relief.
-Why gate on the second subscription and not on features: the gate *is* the thesis.
+The pitch (Paul, 2026-10-11): you *can* build it; that's not the point. The $9.99 buys a power user
+who keeps building and curating it for you: cutting what doesn't earn its place, fixing what breaks
+when a CLI changes, shipping updates. Giving away the prompt is the proof that we're not hiding
+anything, and the reminder of what doing it yourself costs.
+
+Why one-time: the customer already pays $20–$400 a month in subscriptions; a third one for the
+client is resentment. Why gate on the second subscription and not on features: the gate *is* the thesis.
 
 Reliability over revenue: when the store can't be reached and nothing is cached, Walkie is
 unlocked. Nobody gets locked out of their own Mac by a StoreKit outage, and until the product
