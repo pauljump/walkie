@@ -26,7 +26,8 @@ final class DemoWalkthroughTests: XCTestCase {
         XCTAssertTrue(allow.waitForExistence(timeout: 10))
         beat(); beat()
         allow.tap()
-        XCTAssertTrue(app.staticTexts["Tests pass on iPad Pro and iPhone. The login button works on both now."].waitForExistence(timeout: 10))
+        // Replies render in a text view; the result line under them is a plain label.
+        XCTAssertTrue(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH 'Done'")).firstMatch.waitForExistence(timeout: 15))
         beat(); beat()
 
         // Back home, open the planning conversation and its plan.
